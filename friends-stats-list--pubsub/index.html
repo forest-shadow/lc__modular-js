@@ -29,8 +29,17 @@
     </div>
 </div>
 
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="./scripts.js"></script>
+<script src="./../bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build.js{{app,.tmp}} scripts/main.js -->
+<script src="scripts/pubsub.js"></script>
+<script src="scripts/stats.js"></script>
+<script src="scripts/people.js"></script>
+<!-- endbuild -->
 </body>
 </html>
