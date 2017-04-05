@@ -18,4 +18,13 @@ let stats = (function(){
         people = newPeople;
         render();
     }
+
+    function destroy() {
+        $stats.remove();
+        events.off('peopleChanged', setPeople);
+    }
+
+    return {
+        destroy: destroy
+    }
 })();
