@@ -20,9 +20,20 @@ body {
     font-size: 3em;
     text-decoration: underline;
   }
+
+  h3 {
+    text-decoration: underline;
+  }
 }
 
+// stats module
+#statsModule {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
 
+// people module
 .hero-unit {
   margin: 20px auto 0 auto;
   width: 300px;
@@ -46,23 +57,32 @@ input {
   border-radius: 4px;
   padding: 10px;
 }
+
 button {
   zoom: 2;
   background-color: #999;
-  border: 1px solid #999;
-  border-radius: 4px;
-  padding: 1px 5px;
+  padding: 5px 20px;
+  border-radius: 0;
+  margin-bottom: 30px;
 
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &.active {
+    background-color:rgb(165, 227, 158);
+  }
 }
 
-button.active {
-  background-color:rgb(165, 227, 158);
-}
+
 #peopleModule {
   text-align: center;
-}
-#peopleModule ul {
-  padding: 0;
+
+  ul {
+    padding: 0;
+  }
 }
 #peopleModule li {
   display: inline-block;

@@ -11,10 +11,18 @@
 <body>
 <div class="container">
     <h1>Friends List App</h1>
+    <div id="statsModule">
+        <script id="stats-template" type="text/template">
+            <h2>Statistics</h2>
+            <p>Number of displayed people: <strong>{{people}}</strong></p>
+        </script>
+    </div>
 
     <div id="peopleModule">
-        <input placeholder="name" type="text">
+        <input placeholder="Enter name" type="text">
         <button id="addPerson">Add Person</button>
+
+        <h3>People list</h3>
         <ul id="people">
             <script id="people-template" type="text/template">
                 {{#people}}
@@ -32,7 +40,7 @@
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
-<script src="./../bower_components/jquery/dist/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

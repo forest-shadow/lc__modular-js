@@ -10,12 +10,12 @@ let people = (function () {
 
     // bind events
     $button.on('click', addPerson);
-    $ul.delegate('i.del', 'click', this.deletePerson);
+    $ul.delegate('i.del', 'click', deletePerson);
 
     _render();
 
     function _render() {
-        $ul.html(Mustache._render(template, {people: people}));
+        $ul.html(Mustache.render(template, {people: people}));
         events.emit('peopleChanged', people.length)
     };
 

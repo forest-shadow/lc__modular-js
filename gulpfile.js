@@ -41,7 +41,7 @@ global.$ = {
 $.gulp.task( 'browserSync', function( cb ) {
   return $.browserSync( {
     server: {
-      baseDir: './friends-list'
+      baseDir: './friends-stats-list--pubsub'
     },
     open: "local",
     browser: "chrome"
@@ -52,13 +52,13 @@ $.gulp.task( 'browserSync', function( cb ) {
  * Scss Task
  *******************************/
 $.gulp.task( 'scss', function() {
-    return $.gulp.src('./friends-list/**/*.scss')
+    return $.gulp.src('./friends-stats-list--pubsub/**/*.scss')
         .pipe( $.gp.sourcemaps.init() )
         .pipe( $.gp.sass()).on('error', $.gp.notify.onError({ title: 'Sass' }) )
         .pipe( $.gp.autoprefixer({ browsers: ['last 3 version', '> 1%', 'ie 8', 'ie 9', 'Opera 12.1'] }) )
         //.pipe( $.gp.rename( 'styles.css' ) )
         .pipe( $.gp.sourcemaps.write( '.' ) )
-        .pipe( $.gulp.dest( './friends-list/' ) )
+        .pipe( $.gulp.dest( './friends-stats-list--pubsub/' ) )
         .pipe( $.browserSync.stream() );
 } );
 
@@ -84,10 +84,10 @@ $.gulp.task( 'scss', function() {
  * Watch Task
  *******************************/
 $.gulp.task( 'watch', function () {
-  $.gulp.watch('./friends-list/**/*.js', [$.browserSync.reload]);
-  $.gulp.watch('./friends-list/**/*.scss', ['scss', $.browserSync.reload]);
-  $.gulp.watch('./friends-list/index.html').on('change', $.browserSync.reload);
-    $.gulp.watch('./friends-list/style.css').on('change', $.browserSync.reload);
+  $.gulp.watch('./friends-stats-list--pubsub/**/*.js', [$.browserSync.reload]);
+  $.gulp.watch('./friends-stats-list--pubsub/**/*.scss', ['scss', $.browserSync.reload]);
+  $.gulp.watch('./friends-stats-list--pubsub/index.html').on('change', $.browserSync.reload);
+    $.gulp.watch('./friends-stats-list--pubsub/style.css').on('change', $.browserSync.reload);
 });
 
 
