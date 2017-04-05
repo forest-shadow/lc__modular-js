@@ -1,5 +1,3 @@
-# Vk Friends Lister App
+# LearnCode Academy: JS Patterns
 
-### TODO
-* code refactor
-* create custom `array onchange` or `localStorage onchange` event handler
+Explore implementation of different js patterns
